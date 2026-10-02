@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YING HASAN | Vật tư phòng sạch - ESD - Đóng gói</title>
+<meta name="description" content="YING HASAN cung cấp vật tư phòng sạch, chống tĩnh điện ESD, vật tư đóng gói và gia công theo yêu cầu.">
+<style>
+:root{
+  --navy:#0b1f3a; --blue:#0879c9; --cyan:#12b8d8; --light:#f4f8fb;
+  --text:#172333; --muted:#667789; --white:#fff; --line:#dfe8ef;
+  --shadow:0 16px 45px rgba(11,31,58,.10); --radius:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,92%);margin:auto}
+.topbar{background:var(--navy);color:#dbe8f3;font-size:13px;padding:8px 0}
+.topbar .container{display:flex;justify-content:space-between;gap:20px}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:11px;font-weight:900;font-size:24px;color:var(--navy);letter-spacing:.5px}
+.logo-mark{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--navy),var(--blue),var(--cyan));display:grid;place-items:center;color:white;font-size:15px;font-weight:900}
+nav{display:flex;gap:26px;align-items:center;font-size:14px;font-weight:700}
+nav a:hover{color:var(--blue)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 21px;border-radius:10px;font-weight:800;font-size:14px;border:1px solid transparent;cursor:pointer}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 8px 20px rgba(8,121,201,.2)}
+.btn-primary:hover{background:#066bab}
+.btn-outline{border-color:#b9cbd9;color:var(--navy);background:#fff}
+.hero{background:radial-gradient(circle at 80% 20%,rgba(18,184,216,.22),transparent 28%),linear-gradient(135deg,#edf7fc 0%,#fff 56%,#eef8fb 100%);padding:90px 0 76px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}
+.badge{display:inline-flex;gap:8px;align-items:center;background:#e2f5fb;color:#086b98;padding:8px 13px;border-radius:999px;font-weight:800;font-size:12px;margin-bottom:20px}
+h1{font-size:clamp(42px,5.5vw,68px);line-height:1.05;letter-spacing:-2.5px;color:var(--navy);margin-bottom:22px}
+h1 span{color:var(--blue)}
+.hero p{font-size:18px;color:var(--muted);max-width:650px;margin-bottom:30px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-card{position:relative;min-height:390px;border-radius:28px;background:linear-gradient(145deg,#0b1f3a,#0d4772);box-shadow:var(--shadow);padding:28px;color:white;overflow:hidden}
+.hero-card:before,.hero-card:after{content:"";position:absolute;border-radius:50%;filter:blur(2px)}
+.hero-card:before{width:280px;height:280px;background:rgba(18,184,216,.26);right:-70px;top:-70px}
+.hero-card:after{width:220px;height:220px;background:rgba(8,121,201,.28);left:-100px;bottom:-100px}
+.factory{position:absolute;inset:0;display:grid;place-items:center;z-index:1}
+.factory-box{width:74%;height:68%;border:1px solid rgba(255,255,255,.2);border-radius:22px;background:rgba(255,255,255,.07);padding:25px;display:flex;flex-direction:column;justify-content:space-between}
+.factory-title{font-size:25px;font-weight:900}
+.factory-line{height:1px;background:rgba(255,255,255,.2)}
+.product-icons{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.picon{height:78px;border-radius:15px;background:rgba(255,255,255,.1);display:grid;place-items:center;font-size:27px}
+.section{padding:85px 0}
+.section-light{background:var(--light)}
+.section-head{text-align:center;max-width:720px;margin:0 auto 45px}
+.kicker{color:var(--blue);font-size:12px;font-weight:900;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:9px}
+h2{font-size:clamp(30px,4vw,44px);line-height:1.15;color:var(--navy);margin-bottom:14px;letter-spacing:-1px}
+.section-head p{color:var(--muted)}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.category{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:25px;transition:.25s;box-shadow:0 5px 20px rgba(11,31,58,.04)}
+.category:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#b7dced}
+.icon{width:52px;height:52px;border-radius:14px;background:#eaf7fc;display:grid;place-items:center;font-size:25px;margin-bottom:18px}
+.category h3{font-size:18px;color:var(--navy);margin-bottom:8px}
+.category p{font-size:14px;color:var(--muted)}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.product{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 6px 22px rgba(11,31,58,.05)}
+.product-img{height:190px;background:linear-gradient(135deg,#eaf5f9,#cfeaf3);display:grid;place-items:center;font-size:60px}
+.product-body{padding:22px}
+.product h3{font-size:18px;color:var(--navy);margin-bottom:8px}
+.product p{font-size:14px;color:var(--muted);min-height:48px}
+.product .tag{display:inline-block;margin-top:14px;padding:5px 9px;background:#edf7fb;color:#08729e;border-radius:6px;font-size:11px;font-weight:800}
+.about{display:grid;grid-template-columns:.95fr 1.05fr;gap:60px;align-items:center}
+.about-visual{min-height:410px;border-radius:25px;background:linear-gradient(145deg,#0b1f3a,#0879c9);padding:28px;color:white;position:relative;overflow:hidden}
+.about-visual .big{font-size:100px;font-weight:900;opacity:.13;position:absolute;right:-10px;bottom:-30px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;position:absolute;bottom:28px;left:28px;right:28px}
+.stat{padding:20px;border-radius:15px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15)}
+.stat strong{font-size:28px;display:block}.stat span{font-size:12px;color:#d5e8f3}
+.about ul{list-style:none;margin:25px 0}
+.about li{margin:12px 0;color:var(--muted)}
+.about li:before{content:"✓";color:var(--blue);font-weight:900;margin-right:10px}
+.cta{background:linear-gradient(120deg,var(--navy),#075c93);color:white;padding:60px 0}
+.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
+.cta h2{color:#fff;margin-bottom:8px}.cta p{color:#c9dce8}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.contact-card,.form{border:1px solid var(--line);border-radius:18px;padding:28px;background:#fff}
+.contact-item{display:flex;gap:14px;margin:18px 0}
+.contact-item b{display:block;color:var(--navy)}.contact-item span{color:var(--muted);font-size:14px}
+form{display:grid;gap:13px}
+input,textarea,select{width:100%;padding:13px 14px;border:1px solid #ccd9e2;border-radius:9px;font:inherit;outline:none}
+input:focus,textarea:focus{border-color:var(--blue)}
+textarea{min-height:120px;resize:vertical}
+footer{background:#07172b;color:#b7c8d5;padding:45px 0 20px}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}
+footer h3{color:#fff;margin-bottom:14px}footer p,footer li{font-size:14px;margin:7px 0}footer ul{list-style:none}
+.copy{border-top:1px solid rgba(255,255,255,.1);margin-top:35px;padding-top:18px;font-size:12px;text-align:center}
+.mobile-menu{display:none}
+@media(max-width:900px){
+ nav{display:none}.mobile-menu{display:block;border:0;background:none;font-size:25px}
+ .hero-grid,.about,.contact{grid-template-columns:1fr}.hero{padding-top:60px}.grid4{grid-template-columns:repeat(2,1fr)}.products{grid-template-columns:1fr 1fr}
+ .cta-inner{flex-direction:column;align-items:flex-start}.footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+ .topbar .container{display:block;text-align:center}.topbar .container span:last-child{display:none}
+ .grid4,.products,.footer-grid{grid-template-columns:1fr}.hero-card{min-height:320px}.section{padding:60px 0}
+ h1{letter-spacing:-1.5px}.nav{height:68px}.logo{font-size:20px}.logo-mark{width:36px;height:36px}
+}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="container"><span>YING HASAN — Giải pháp vật tư cho sản xuất & đóng gói</span><span>☎ 0387 786 488 &nbsp; | &nbsp; ✉ Sale02@yinghasan.vn</span></div></div>
+
+<header>
+<div class="container nav">
+<a class="logo" href="#home"><span class="logo-mark">YHS</span>YING HASAN</a>
+<nav>
+<a href="#home">Trang chủ</a><a href="#products">Sản phẩm</a><a href="#about">Giới thiệu</a><a href="#custom">Gia công</a><a href="#contact">Liên hệ</a>
+<a class="btn btn-primary" href="#contact">Nhận báo giá</a>
+</nav>
+<button class="mobile-menu" onclick="document.querySelector('nav').classList.toggle('show')">☰</button>
+</div>
+</header>
+
+<main id="home">
+<section class="hero">
+<div class="container hero-grid">
+<div>
+<div class="badge">● SẢN PHẨM & GIẢI PHÁP B2B</div>
+<h1>Vật tư cho <span>nhà máy</span>.<br>Giải pháp cho <span>sản xuất</span>.</h1>
+<p>YING HASAN cung cấp vật tư phòng sạch, chống tĩnh điện ESD, vật liệu đóng gói và giải pháp gia công theo yêu cầu cho doanh nghiệp.</p>
+<div class="hero-actions"><a class="btn btn-primary" href="#products">Khám phá sản phẩm →</a><a class="btn btn-outline" href="#contact">Yêu cầu báo giá</a></div>
+</div>
+<div class="hero-card">
+<div class="factory">
+<div class="factory-box">
+<div><div class="kicker" style="color:#71d7ec">YING HASAN</div><div class="factory-title">SUPPLY • PROTECT • DELIVER</div></div>
+<div class="product-icons"><div class="picon">⚡</div><div class="picon">🧤</div><div class="picon">📦</div><div class="picon">🫧</div><div class="picon">🧼</div><div class="picon">🔧</div></div>
+<div><div class="factory-line"></div><small>Chất lượng – Tận tâm – Uy tín</small></div>
+</div></div>
+</div>
+</div>
+</section>
+
+<section class="section section-light">
+<div class="container">
+<div class="section-head"><div class="kicker">Danh mục chính</div><h2>Giải pháp vật tư toàn diện</h2><p>Tập trung vào những sản phẩm phục vụ môi trường sản xuất, điện tử, phòng sạch và đóng gói công nghiệp.</p></div>
+<div class="grid4">
+<div class="category"><div class="icon">⚡</div><h3>Vật tư ESD</h3><p>Thảm, dây đeo tay, túi chống tĩnh điện, găng tay và các sản phẩm kiểm soát tĩnh điện.</p></div>
+<div class="category"><div class="icon">🧤</div><h3>Phòng sạch</h3><p>Găng tay, khăn lau, quần áo và vật tư tiêu hao cho môi trường kiểm soát sạch.</p></div>
+<div class="category"><div class="icon">📦</div><h3>Đóng gói</h3><p>Túi PE/PP, OPP, màng phim và các vật liệu bảo vệ sản phẩm trong vận chuyển.</p></div>
+<div class="category"><div class="icon">🫧</div><h3>Chống sốc</h3><p>Xốp hơi, PE Foam và vật liệu đệm bảo vệ linh kiện, thiết bị và hàng hóa.</p></div>
+</div>
+</div>
+</section>
+
+<section class="section" id="products">
+<div class="container">
+<div class="section-head"><div class="kicker">Sản phẩm tiêu biểu</div><h2>Những sản phẩm khách hàng thường quan tâm</h2><p>Danh mục có thể mở rộng theo nhu cầu thực tế của từng nhà máy.</p></div>
+<div class="products">
+<div class="product"><div class="product-img">⚡</div><div class="product-body"><h3>Thảm chống tĩnh điện</h3><p>Giải pháp cho bàn thao tác, khu vực lắp ráp và sửa chữa linh kiện điện tử.</p><span class="tag">ESD CONTROL</span></div></div>
+<div class="product"><div class="product-img">🛍️</div><div class="product-body"><h3>Túi chống tĩnh điện</h3><p>Bảo vệ linh kiện điện tử khỏi tác động của tĩnh điện trong lưu kho và vận chuyển.</p><span class="tag">ESD BAG</span></div></div>
+<div class="product"><div class="product-img">🫧</div><div class="product-body"><h3>Túi & tấm xốp hơi</h3><p>Vật liệu chống sốc cho linh kiện, thiết bị, hàng dễ trầy xước và dễ vỡ.</p><span class="tag">PACKAGING</span></div></div>
+<div class="product"><div class="product-img">🧤</div><div class="product-body"><h3>Găng tay phòng sạch / ESD</h3><p>Nhiều lựa chọn theo yêu cầu sử dụng, môi trường và tiêu chuẩn của khách hàng.</p><span class="tag">CLEANROOM</span></div></div>
+<div class="product"><div class="product-img">💧</div><div class="product-body"><h3>Gói chống ẩm</h3><p>Hỗ trợ kiểm soát độ ẩm và bảo vệ sản phẩm trong quá trình đóng gói, lưu kho.</p><span class="tag">MOISTURE CONTROL</span></div></div>
+<div class="product"><div class="product-img">🔧</div><div class="product-body"><h3>Giá đỡ PCB / SMT</h3><p>Hỗ trợ lưu trữ, thao tác và bảo vệ bảng mạch trong quy trình sản xuất.</p><span class="tag">PCB / SMT</span></div></div>
+</div>
+</div>
+</section>
+
+<section class="section section-light" id="about">
+<div class="container about">
+<div class="about-visual"><div class="kicker" style="color:#74d8ed">VỀ YING HASAN</div><h2 style="color:white;margin-top:10px">Đồng hành cùng sản xuất.</h2><p style="color:#c7dce8;max-width:450px">Cung cấp vật tư và giải pháp đóng gói hướng đến nhu cầu thực tế của doanh nghiệp.</p><div class="big">YHS</div><div class="stats"><div class="stat"><strong>01</strong><span>Nguồn hàng trực tiếp</span></div><div class="stat"><strong>02</strong><span>Gia công theo yêu cầu</span></div><div class="stat"><strong>03</strong><span>Giao hàng nhanh</span></div><div class="stat"><strong>04</strong><span>Tư vấn theo nhu cầu</span></div></div></div>
+<div>
+<div class="kicker">Vì sao chọn YING HASAN?</div><h2>Không chỉ bán sản phẩm — cung cấp đúng giải pháp.</h2>
+<p style="color:var(--muted)">YING HASAN định hướng trở thành đối tác cung ứng vật tư đáng tin cậy cho các doanh nghiệp sản xuất, đặc biệt trong lĩnh vực điện tử, cơ khí, phòng sạch và đóng gói.</p>
+<ul><li>Sản phẩm đa dạng, phù hợp nhiều nhu cầu sản xuất.</li><li>Có thể tư vấn quy cách, kích thước và vật liệu theo ứng dụng.</li><li>Nhận gia công sản phẩm đóng gói theo yêu cầu.</li><li>Ưu tiên chất lượng ổn định, giá cạnh tranh và tiến độ giao hàng.</li></ul>
+<a class="btn btn-primary" href="#contact">Trao đổi nhu cầu →</a>
+</div>
+</div>
+</section>
+
+<section class="section" id="custom">
+<div class="container">
+<div class="section-head"><div class="kicker">Custom Packaging</div><h2>Gia công theo yêu cầu</h2><p>Từ kích thước đến quy cách đóng gói, chúng tôi có thể tiếp nhận yêu cầu riêng của doanh nghiệp.</p></div>
+<div class="grid4">
+<div class="category"><div class="icon">📐</div><h3>Đúng kích thước</h3><p>Tiếp nhận kích thước, độ dày và quy cách theo nhu cầu thực tế.</p></div>
+<div class="category"><div class="icon">🧩</div><h3>Đúng vật liệu</h3><p>Tư vấn vật liệu phù hợp với sản phẩm, môi trường và mục đích sử dụng.</p></div>
+<div class="category"><div class="icon">🏭</div><h3>Đúng số lượng</h3><p>Trao đổi sản lượng và kế hoạch giao hàng theo từng đơn hàng.</p></div>
+<div class="category"><div class="icon">🤝</div><h3>Đúng yêu cầu</h3><p>Hỗ trợ từ khâu tiếp nhận thông tin đến báo giá và triển khai.</p></div>
+</div>
+</div>
+</section>
+
+<section class="cta"><div class="container cta-inner"><div><div class="kicker" style="color:#74d8ed">Bạn đang cần vật tư?</div><h2>Gửi yêu cầu — chúng tôi tư vấn quy cách phù hợp.</h2><p>Liên hệ YING HASAN để nhận báo giá và trao đổi nhu cầu.</p></div><a class="btn btn-primary" style="background:#fff;color:var(--navy)" href="#contact">NHẬN BÁO GIÁ →</a></div></section>
+
+<section class="section" id="contact">
+<div class="container">
+<div class="section-head"><div class="kicker">Liên hệ</div><h2>Hãy gửi nhu cầu của bạn</h2><p>Điền thông tin bên dưới. Đây là bản demo giao diện; khi triển khai thật có thể kết nối form với email/Zalo/CRM.</p></div>
+<div class="contact">
+<div class="contact-card">
+<h2 style="font-size:28px">YING HASAN</h2>
+<p style="color:var(--muted);margin-top:8px">Chất lượng – Tận tâm – Uy tín</p>
+<div class="contact-item"><div>📞</div><div><b>Hotline</b><span>0387 786 488 (Minh Anh)</span></div></div>
+<div class="contact-item"><div>✉️</div><div><b>Email</b><span>Sale02@yinghasan.vn</span></div></div>
+<div class="contact-item"><div>📍</div><div><b>Địa chỉ</b><span>Đường Phùng Hưng – Phường Tam Phước – TP. Đồng Nai</span></div></div>
+</div>
+<div class="form">
+<form onsubmit="sendForm(event)">
+<input required placeholder="Họ và tên">
+<input required type="tel" placeholder="Số điện thoại">
+<input type="email" placeholder="Email">
+<select><option>Chọn nhóm sản phẩm</option><option>Vật tư ESD</option><option>Vật tư phòng sạch</option><option>Vật tư đóng gói</option><option>Vật liệu chống sốc</option><option>Gia công theo yêu cầu</option></select>
+<textarea required placeholder="Nhu cầu / quy cách / số lượng cần báo giá"></textarea>
+<button class="btn btn-primary" type="submit">GỬI YÊU CẦU BÁO GIÁ</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container footer-grid">
+<div><div class="logo" style="color:#fff"><span class="logo-mark">YHS</span>YING HASAN</div><p style="margin-top:15px">Giải pháp vật tư cho sản xuất, phòng sạch, ESD và đóng gói.</p></div>
+<div><h3>Danh mục</h3><ul><li>Vật tư ESD</li><li>Phòng sạch</li><li>Đóng gói</li><li>Chống sốc</li></ul></div>
+<div><h3>Liên hệ</h3><ul><li>0387 786 488</li><li>Sale02@yinghasan.vn</li><li>Minh Anh</li></ul></div>
+</div>
+<div class="container copy">© 2026 YING HASAN. All rights reserved.</div>
+</footer>
+
+<script>
+function sendForm(e){
+  e.preventDefault();
+  alert("Cảm ơn bạn! Đây là bản demo website. Khi triển khai thật, form này có thể kết nối trực tiếp với email hoặc hệ thống nhận báo giá.");
+}
+</script>
+</body>
+</html>
